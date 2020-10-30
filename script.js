@@ -19,12 +19,11 @@ window.addEventListener("load", function(){
                     </div>
                 <img class="avatar" src=${json[i].picture}>
                 </div>`
-
-                let activeArray = document.getElementsByClassName("active");
-                for (let i = 0; i < activeArray.length; i++) {
-                    if (json[i].active === true) {
-                        activeArray[i].style.color = "green";
-                    }
+            }
+            let activeArray = document.getElementsByClassName("active");
+            for (let i = 0; i < activeArray.length; i++) {
+                if (json[i].active === true) {
+                    activeArray[i].style.color = "green";
                 }
             }
         });
