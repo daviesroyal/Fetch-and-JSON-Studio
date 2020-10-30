@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     let container = document.getElementById("container");
     fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response){
         response.json().then(function(json){
-            json.sort((a, b) => a.hoursInSpace - b.hoursInSpace);
+            json.sort((a, b) => b.hoursInSpace - a.hoursInSpace);
             container.innerHTML += `<p>Number of Astronauts: ${json.length}</p>`;
             for (let i = 0; i < json.length; i++) {
                 //TODO: green active text, sort and count astronauts
